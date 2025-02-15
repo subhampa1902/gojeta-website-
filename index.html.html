@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gojeta - Innovating Tomorrow's Technology</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#5740D9',
+secondary: '#2A2A42'
+},
+borderRadius: {
+'none': '0px',
+'sm': '8px',
+DEFAULT: '12px',
+'md': '16px',
+'lg': '20px',
+'xl': '24px',
+'2xl': '28px',
+'3xl': '32px',
+'full': '9999px',
+'button': '12px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.gradient-bg {
+background: linear-gradient(135deg, #5740D9 0%, rgba(87, 64, 217, 0.8) 100%);
+}
+@keyframes pulse-border {
+0% { box-shadow: 0 0 0 0 rgba(87, 64, 217, 0.4); }
+70% { box-shadow: 0 0 0 10px rgba(87, 64, 217, 0); }
+100% { box-shadow: 0 0 0 0 rgba(87, 64, 217, 0); }
+}
+.pulse-effect {
+animation: pulse-border 2s infinite;
+}
+.hover-lift {
+transition: transform 0.3s ease;
+}
+.hover-lift:hover {
+transform: translateY(-5px);
+}
+.floating-particles {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+pointer-events: none;
+}
+.particle {
+position: absolute;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+animation: float 6s infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0) translateX(0); }
+50% { transform: translateY(-20px) translateX(10px); }
+}
+.glass-effect {
+backdrop-filter: blur(10px);
+background: rgba(255, 255, 255, 0.1);
+}
+.nav-scrolled {
+background: white;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+<body class="font-['Inter']">
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-16">
+<a href="#" class="text-2xl font-bold tracking-wider text-primary">GO<span class="text-secondary">JETA</span></a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-gray-800 hover:text-primary transition-colors">Home</a>
+<a href="#" class="text-gray-800 hover:text-primary transition-colors">About</a>
+<a href="#" class="text-gray-800 hover:text-primary transition-colors">Services</a>
+<a href="#" class="text-gray-800 hover:text-primary transition-colors">Portfolio</a>
+<a href="#" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="relative">
+<input type="text" placeholder="Search" class="pl-10 pr-4 py-2 rounded-full border-none bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary/20 w-48">
+<i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+</div>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 hover:scale-105 hover:shadow-lg transition-all duration-300 whitespace-nowrap group">
+Contact Us
+<i class="ri-arrow-right-line ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative min-h-screen pt-24 overflow-hidden">
+<div class="floating-particles" id="particles"></div>
+<div class="container mx-auto px-6 py-20">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h1 class="text-6xl font-bold leading-tight">
+Innovating <span class="text-primary">Tomorrow's</span> Technology
+</h1>
+<p class="text-xl text-gray-600">
+Empowering businesses with cutting-edge software solutions. We transform ideas into powerful digital experiences that drive growth and innovation.
+</p>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 hover:scale-105 hover:shadow-lg transition-all duration-300 whitespace-nowrap group">
+Get Started
+<i class="ri-rocket-line ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+</button>
+<button class="border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap group">
+Learn More
+<i class="ri-arrow-right-line ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+</button>
+</div>
+</div>
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/be826a582b668b28fbb7d29eb472cdee.jpg" class="w-full object-cover rounded-lg shadow-2xl">
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-4xl font-bold mb-4">Our Services</h2>
+<p class="text-gray-600">
+We deliver comprehensive software solutions tailored to your business needs
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:rotate-6 transition-all duration-300">
+<i class="ri-code-line text-primary text-2xl group-hover:text-white"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Software Development</h3>
+<p class="text-gray-600">Custom software solutions built with cutting-edge technologies to drive your business forward.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-cloud-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
+<p class="text-gray-600">Scalable cloud infrastructure and services to optimize your operations and reduce costs.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-robot-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">AI Integration</h3>
+<p class="text-gray-600">Advanced AI solutions to automate processes and enhance decision-making capabilities.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-bold">Why Choose Gojeta?</h2>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-shield-check-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">Proven Expertise</h3>
+<p class="text-gray-600">Over 10 years of experience delivering successful software solutions.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-team-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">Dedicated Team</h3>
+<p class="text-gray-600">Expert developers and designers committed to your success.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-customer-service-2-line text-primary text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+<p class="text-gray-600">Round-the-clock technical support and maintenance services.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/ee39b2bfcaf2b0b84fd16d51f00d51e6.jpg" class="w-full rounded-lg shadow-2xl">
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-4xl font-bold mb-4">Our Latest Projects</h2>
+<p class="text-gray-600">
+Discover how we've helped businesses transform their digital presence
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img src="https://public.readdy.ai/ai/img_res/f40ce10b949573f24b27bd9cb32d8023.jpg" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Enterprise Dashboard</h3>
+<p class="text-gray-600 mb-4">Advanced analytics platform for Fortune 500 company</p>
+<a href="#" class="text-primary hover:text-primary/80 font-medium group inline-flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img src="https://public.readdy.ai/ai/img_res/185530ae3ec2eeb1b191b25b0dce9d15.jpg" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Mobile Banking App</h3>
+<p class="text-gray-600 mb-4">Secure and intuitive mobile banking solution</p>
+<a href="#" class="text-primary hover:text-primary/80 font-medium group inline-flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<img src="https://public.readdy.ai/ai/img_res/f31a8912290d94f7b570974527d136fb.jpg" class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">AI Analytics Platform</h3>
+<p class="text-gray-600 mb-4">Intelligent data analysis and reporting system</p>
+<a href="#" class="text-primary hover:text-primary/80 font-medium group inline-flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-12">
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 rounded-lg border-gray-200 focus:border-primary focus:ring-primary" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 rounded-lg border-gray-200 focus:border-primary focus:ring-primary" required>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-2 rounded-lg border-gray-200 focus:border-primary focus:ring-primary" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 group">
+Send Message
+<i class="ri-send-plane-line ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+</button>
+</form>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Address</h4>
+<p class="text-gray-600">123 Innovation Drive, Silicon Valley, CA 94025</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-phone-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Phone</h4>
+<p class="text-gray-600">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+<i class="ri-mail-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-semibold">Email</h4>
+<p class="text-gray-600">contact@gojeta.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-100 p-6 rounded-lg">
+<h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+<div class="space-y-2">
+<p class="flex justify-between">
+<span class="text-gray-600">Monday - Friday</span>
+<span class="font-medium">9:00 AM - 6:00 PM</span>
+</p>
+<p class="flex justify-between">
+<span class="text-gray-600">Saturday</span>
+<span class="font-medium">10:00 AM - 4:00 PM</span>
+</p>
+<p class="flex justify-between">
+<span class="text-gray-600">Sunday</span>
+<span class="font-medium">Closed</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-20">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<h2 class="text-2xl font-bold tracking-wider text-white">GO<span class="text-primary">JETA</span></h2>
+<p class="text-gray-400">
+Empowering businesses with innovative software solutions for a digital future.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-github-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Software Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cloud Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI Integration</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and insights.</p>
+<form class="space-y-4">
+<input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-lg bg-white/10 border-none text-white placeholder-gray-400 focus:ring-2 focus:ring-primary">
+<button type="submit" class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 group">
+Subscribe
+<i class="ri-mail-send-line ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-16 pt-8 text-center">
+<p class="text-gray-400">© 2025 Gojeta. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+if (window.scrollY > 50) {
+navbar.classList.add('nav-scrolled');
+} else {
+navbar.classList.remove('nav-scrolled');
+}
+});
+function createParticles() {
+const container = document.getElementById('particles');
+for (let i = 0; i < 50; i++) {
+const particle = document.createElement('div');
+particle.className = 'particle';
+particle.style.width = Math.random() * 5 + 'px';
+particle.style.height = particle.style.width;
+particle.style.left = Math.random() * 100 + '%';
+particle.style.top = Math.random() * 100 + '%';
+particle.style.animationDelay = Math.random() * 5 + 's';
+container.appendChild(particle);
+}
+}
+createParticles();
+document.querySelector('form').addEventListener('submit', (e) => {
+e.preventDefault();
+const formData = new FormData(e.target);
+const data = Object.fromEntries(formData);
+console.log('Form submitted:', data);
+const notification = document.createElement('div');
+notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform duration-300';
+notification.textContent = 'Message sent successfully!';
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.remove();
+}, 3000);
+e.target.reset();
+});
+</script>
+</body>
+</html>
